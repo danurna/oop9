@@ -1,6 +1,6 @@
 
-public class Shortcrust extends Dough {
+public class ShortcrustDough extends Dough {
     public String toString() {
-        return "Shortcrust";
+        return "ShortcrustDough";
     }
 }

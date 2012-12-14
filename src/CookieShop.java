@@ -15,9 +15,10 @@ public class CookieShop {
         bakeries.put(new Moon(), new Bakery(new Moon()));
     }
 
-    public CookieBox processOrder(List<Order> orders) {
+    public CookieBox processOrder(Order order) {
+        List<Position> orders = order.getOrderList();
         CookieBox box = new CookieBox();
-        for (Order current : orders) {
+        for (Position current : orders) {
             for (int i = 0; i < current.getAmount(); ++i) {
                 
                 SingleCookie c = bakeries.get(current.getShape()).create(
@@ -34,10 +35,6 @@ public class CookieShop {
     }
     
     public static void main(String[] args) {
-        CookieShop cs = new CookieShop();
-        List<Order> orders = new ArrayList<Order>();
-        orders.add(new Order(new SantaClaus(), new CinnamonStarDough(), 3));
-        orders.add(new Order(new Round(), new ChocolateDough(), 3, new ChocolateFilling()));
-        cs.processOrder(orders).content();
+
     }
 }

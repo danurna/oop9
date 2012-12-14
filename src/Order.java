@@ -1,34 +1,29 @@
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * Repraesentiert eine Bestellung
+ */
 public class Order {
-    // IV: != null
-    private Shape shape;
-    // IV: != null
-    private Dough dough;
-    // IV: can be null
-    private Filling filling;
-    private int amount;
-    
-    public Order(Shape shape, Dough dough, int amount) {
-        this(shape, dough, amount, null);
+    private List<Position> order;
+
+    public Order(){
+         order = new ArrayList<Position>();
     }
-    
-    public Order(Shape shape, Dough dough, int amount, Filling filling) {
-        this.shape = shape;
-        this.dough = dough;
-        this.amount = amount;
-        this.filling = filling;
+
+    public void add(Position position){
+        order.add(position);
     }
-    
-    public Shape getShape() {
-        return shape;
+
+    public List<Position> getOrderList(){
+        return order;
     }
-    public Dough getDough() {
-        return dough;
+
+    /**
+     * Listet alle Positionen einer Bestellung in der Standardausgabe auf. 
+     */
+    public void print(){
+        System.out.println(order.toString());
     }
-    public Filling getFilling() {
-        return filling;
-    }
-    public int getAmount() {
-        return amount;
-    }
-    
+
 }
