@@ -1,4 +1,4 @@
-public class SingleCookie extends Cookie implements Cloneable {
+public class SingleCookie extends Cookie {
     private final Shape shape;
     private final Dough dough;
 
@@ -7,9 +7,9 @@ public class SingleCookie extends Cookie implements Cloneable {
         this.dough = dough;
     }
     
-    @Override
-    public Object clone() throws CloneNotSupportedException {
-        return super.clone();
+    public SingleCookie(SingleCookie cookie) {
+        this.shape = cookie.shape;
+        this.dough = cookie.dough;
     }
     
     public String toString() {
