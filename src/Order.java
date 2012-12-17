@@ -11,6 +11,7 @@ public class Order {
          order = new ArrayList<Position>();
     }
 
+    //VB position != null
     public void add(Position position){
         order.add(position);
     }

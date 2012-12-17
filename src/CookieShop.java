@@ -2,8 +2,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
+// Die baekerei
 public class CookieShop {
+	// fuer jede form eine baeckerei
     Map<Shape, Bakery> bakeries;
     DoubleCookieBakery doubleBakery;
 
@@ -15,6 +16,9 @@ public class CookieShop {
         bakeries.put(new Moon(), new Bakery(new Moon()));
     }
 
+    // durchlaufe die liste der Positionen und backe kekse mit den jeweiligen 
+    // baykery klassen
+    // liefere Box mit fertigen keksen 
     public CookieBox processOrder(Order order) {
         List<Position> orders = order.getOrderList();
         CookieBox box = new CookieBox();

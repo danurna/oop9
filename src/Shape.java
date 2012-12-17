@@ -1,4 +1,6 @@
-
+/**
+ * Abstrakte Superklasse fuer moegliche Keksformen.
+ */
 public abstract class Shape {
     @Override
     public boolean equals(Object o) {

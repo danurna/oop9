@@ -1,3 +1,4 @@
+/** Position einer bestellung*/
 public class Position {
     // IV: != null
     private Shape shape;
@@ -5,12 +6,15 @@ public class Position {
     private Dough dough;
     // IV: can be null
     private Filling filling;
+    // IV: amount > 0
     private int amount;
     
+    //VB shape & dough != null, amount > 0
     public Position(Shape shape, Dough dough, int amount) {
         this(shape, dough, amount, null);
     }
     
+    //VB shape & dough != null, amount > 0
     public Position(Shape shape, Dough dough, int amount, Filling filling) {
         this.shape = shape;
         this.dough = dough;
