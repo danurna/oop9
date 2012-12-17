@@ -3,6 +3,6 @@
 public class DoubleCookieBakery {
 	// VB proto != null, fill != null
     public DoubleCookie create(SingleCookie proto, Filling fill) {
-        return new DoubleCookie(proto, new SingleCookie(proto), fill);
+        return new DoubleCookie(proto, proto.clone(), fill);
     }
 }
